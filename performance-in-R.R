@@ -61,3 +61,12 @@ improved_move <- function(is_double) {
 # Very occassionally the improved solution is actually a little slower
 # This is just random chance
 microbenchmark(move(is_double), improved_move(is_double), times = 1e5)
+
+# Load the parallel package
+library(parallel)
+
+# Store the number of cores in the object no_of_cores
+no_of_cores <- detectCores()
+
+# Print no_of_cores
+no_of_cores
